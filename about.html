@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krazy DIY Halo-Halo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: #ff4444;
+            color: white;
+        }
+
+        .navbar .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            display: flex;
+            justify-content: center; /* Horizontally centers */
+            align-items: center; /* Vertically centers */
+        }
+        .navbar img{
+            width: 100px;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 600;
+        }
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        .navbar .menu-toggle {
+            display: none;
+            font-size: 1.5em;
+            cursor: pointer;
+        }
+        /* Responsive Navbar */
+        @media (max-width: 768px) {
+            .navbar .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 30px;
+                background-color: #ff4444;
+                border-radius: 5px;
+                padding: 10px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+            .navbar .nav-links.active {
+                display: flex;
+            }
+            .navbar .menu-toggle {
+                display: block;
+            }
+        }
+
+        /* About Us Section */
+        #w3-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1.w3-xxxlarge {
+            font-size: 2.5em;
+            font-weight: bold;
+            text-align: center;
+            color: #FF5A5F;
+            margin-bottom: 10px;
+        }
+
+        hr.w3-round {
+            margin: 20px auto;
+            width: 50px;
+            border: none;
+            height: 5px;
+            background-color: #FF5A5F;
+            border-radius: 5px;
+        }
+
+        p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        h2.w3-text-red {
+            font-size: 1.8em;
+            font-weight: bold;
+            margin-top: 30px;
+            color: #FF5A5F;
+        }
+
+        .w3-container {
+            padding: 20px 40px;
+            text-align: justify;
+        }
+
+        /* Add subtle hover effects for interactivity */
+        .w3-container:hover {
+            background-color: #fff9f9;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .w3-container {
+                padding: 15px 20px;
+            }
+
+            h1.w3-xxxlarge {
+                font-size: 2em;
+            }
+
+            h2.w3-text-red {
+                font-size: 1.5em;
+            }
+
+            p {
+                font-size: 1em;
+            }
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #222;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .footer a {
+            color: #ff4444;
+            text-decoration: none;
+        }
+        /* Floating Button */
+        .floating-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #ff4444;
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 50%;
+            font-size: 18px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+        .floating-btn:hover {
+            background-color: #e63e3e;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<div class="navbar">
+    <div class="logo"><img src="PicsVids/Logo.png" alt="Krazy DIY Halo-Halo"> <span> Krazy DIY Halo-Halo</span></div>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="orders.html">Order</a>
+        <a href="#">About</a>
+        <a href="#">Exit</a>
+    </div>
+    <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
+    </div>
+</div>
+
+<!-- About Us Section -->
+<div class="w3-container" style="margin-top:75px" id="about">
+    <h1 class="w3-xxxlarge w3-text-red"><b>About Krazy DIY Halo-Halo</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>At Krazy DIY Halo-Halo, we believe in letting you unleash your creativity. We offer a unique and fun way to enjoy your halo-halo, by allowing you to mix and match from a wide variety of fresh ingredients and toppings. Our goal is to give you a personalized dessert experience that’s as unique as you are. Whether you’re looking for a classic halo-halo or something new and exciting, our wide selection of options has something for everyone. We are dedicated to providing the highest quality ingredients and an unforgettable, interactive dessert experience.</p>
+    
+    <h2 class="w3-text-red"><b>Our Story</b></h2>
+    <p>Founded by passionate dessert lovers, Krazy DIY Halo-Halo was born from the idea that everyone should be able to create their own sweet masterpiece. Our journey began with a dream to offer a customizable and enjoyable dessert experience that brings joy to every customer. Today, we are proud to be the go-to destination for DIY halo-halo creations!</p>
+</div>
+
+
+<!-- Footer -->
+<div class="footer">
+    <p>© 2024 Krazy DIY Halo-Halo | All Rights Reserved</p>
+    <p>Developer <a href="https://www.facebook.com/rainier.reli.9?mibextid=ZbWKwL" target="_blank">Rainier Reli</a></p>
+</div>
+
+<!-- Floating Button -->
+<button class="floating-btn" onclick="window.location.href='Orders.html'">
+    <i class="fas fa-shopping-cart"></i>
+</button>
+
+<script>
+    // Toggle navigation menu
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+</script>
+
+</body>
+</html>

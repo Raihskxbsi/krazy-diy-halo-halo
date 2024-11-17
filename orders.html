@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krazy DIY Halo-Halo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: #ff4444;
+            color: white;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 600;
+        }
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        .navbar .menu-toggle {
+            display: none;
+            font-size: 1.5em;
+            cursor: pointer;
+        }
+        /* Responsive Navbar */
+        @media (max-width: 768px) {
+            .navbar .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 30px;
+                background-color: #ff4444;
+                border-radius: 5px;
+                padding: 10px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+            .navbar .nav-links.active {
+                display: flex;
+            }
+            .navbar .menu-toggle {
+                display: block;
+            }
+        }
+
+        /* General Styles */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #FF5A5F;
+    color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    display: flex;
+    justify-content: center; /* Horizontally centers */
+    align-items: center; /* Vertically centers */
+}
+
+.navbar img{
+    width: 100px;
+}
+
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #FFC3C3;
+}
+
+.navbar .menu-toggle {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .navbar .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 30px;
+        background-color: #FF5A5F;
+        border-radius: 10px;
+        padding: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar .nav-links.active {
+        display: flex;
+    }
+
+    .navbar .menu-toggle {
+        display: block;
+    }
+}
+
+/* Order System */
+.w3-container {
+    margin: 30px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+}
+
+.w3-text-red {
+    color: #FF5A5F;
+}
+
+.w3-round {
+    border-radius: 5px;
+}
+
+form h3 {
+    margin-top: 30px;
+    font-size: 1.5em;
+    color: #FF5A5F;
+}
+
+/* Options Styling */
+.base-option, .ingredient-option, .topping-option {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    gap: 15px;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.base-option:hover, .ingredient-option:hover, .topping-option:hover {
+    background-color: #fff4f4;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+input[type="radio"], input[type="checkbox"] {
+    accent-color: #FF5A5F;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.w3-container img{
+    width: 80px; /* Set the uniform width */
+    height: 80px; /* Set the uniform height */
+    object-fit: cover; /* Ensures the image scales without distortion */
+    border-radius: 8px; /* Optional: Adds rounded corners for consistency */
+    transition: transform 0.3s;
+}
+
+.w3-container img:hover {
+    transform: scale(1.1); /* Subtle hover effect */
+}
+
+
+/* Price Display */
+#price-display {
+    margin-top: 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #FF5A5F;
+    text-align: center;
+}
+
+/* Submit Button */
+.submit-btn {
+    margin-top: 30px;
+    padding: 15px 30px;
+    background-color: #FF5A5F;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    width: 100%;
+    max-width: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.submit-btn:hover {
+    background-color: #FF7878;
+    transform: translateY(-2px);
+}
+
+/* Footer */
+.w3-light-grey {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-top: 1px solid #ddd;
+    text-align: center;
+}
+
+.w3-light-grey p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+.w3-light-grey a {
+    color: #FF5A5F;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.w3-light-grey a:hover {
+    color: #FF7878;
+}
+
+
+        /* Footer */
+        .footer {
+            background-color: #222;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .footer a {
+            color: #ff4444;
+            text-decoration: none;
+        }
+        /* Floating Button */
+        .floating-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #ff4444;
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 50%;
+            font-size: 18px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+        .floating-btn:hover {
+            background-color: #e63e3e;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<div class="navbar">
+    <div class="logo"><img src="PicsVids/Logo.png" alt="Krazy DIY Halo-Halo"> <span> Krazy DIY Halo-Halo</span></div>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="#">Order</a>
+        <a href="about.html">About</a>
+        <a href="#">Exit</a>
+    </div>
+    <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
+    </div>
+</div>
+
+<!-- Order System -->
+<div class="w3-container" style="margin-top:75px" id="order">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Customize Your Halo-Halo</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <form onsubmit="return confirmOrder()">
+        
+    <!-- Base Selection -->
+    <!-- Base Selection -->
+    <h3 class="w3-text-red"><b>Step 1: Choose Your Base</b></h3>
+    <div class="base-option">
+        <input type="radio" id="normal-ice" name="base" value="Normal Ice" data-price="20" required>
+        <label for="normal-ice">
+        <img src="PicsVids/normalice.png" alt="Normal Ice" class="base-img"> Normal Ice (₱20)
+        </label>
+    </div>
+    <div class="base-option">
+        <input type="radio" id="sweet-ice" name="base" value="Sweet Ice" data-price="30">
+        <label for="sweet-ice">
+        <img src="PicsVids/sweetice.png" alt="Sweet Ice" class="base-img"> Sweet Ice (₱30)
+        </label>
+    </div>
+    
+        
+        
+        
+    <!-- Main Ingredients -->
+    <h3 class="w3-text-red"><b>Step 2: Pick Your Main Ingredients</b></h3>
+    <div class="ingredient-option">
+        <input type="checkbox" id="gulaman" name="main[]" value="Gulaman" data-price="10">
+        <label for="gulaman">
+        <img src="PicsVids/gulaman.jpeg" alt="Gulaman" class="ingredient-img"> Gulaman (₱10)
+        </label>
+    </div>
+    <div class="ingredient-option">
+        <input type="checkbox" id="banana" name="main[]" value="Banana" data-price="15">
+        <label for="banana">
+        <img src="PicsVids/banana.jpeg" alt="Banana" class="ingredient-img"> Banana (₱15)
+        </label>
+    </div>
+    <div class="ingredient-option">
+        <input type="checkbox" id="sweet-beans" name="main[]" value="Sweet Beans" data-price="20">
+        <label for="sweet-beans">
+        <img src="PicsVids/sweetbeans.jpeg" alt="Sweet Beans" class="ingredient-img"> Sweet Beans (₱20)
+        </label>
+    </div>
+    <div class="ingredient-option">
+        <input type="checkbox" id="nata-de-coco" name="main[]" value="Nata de Coco" data-price="25">
+        <label for="nata-de-coco">
+        <img src="PicsVids/nata.jpeg" alt="Nata de Coco" class="ingredient-img"> Nata de Coco (₱25)
+        </label>
+    </div>
+    <div class="ingredient-option">
+        <input type="checkbox" id="macapuno" name="main[]" value="Macapuno" data-price="20">
+        <label for="macapuno">
+        <img src="PicsVids/macapuno.jpeg" alt="Macapuno" class="ingredient-img"> Macapuno (₱20)
+        </label>
+    </div>
+    <div class="ingredient-option">
+        <input type="checkbox" id="jackfruit" name="main[]" value="Jackfruit" data-price="30">
+        <label for="jackfruit">
+        <img src="PicsVids/langka.jpeg" alt="Jackfruit" class="ingredient-img"> Jackfruit (₱30)
+        </label>
+    </div>
+    <div class="ingredient-option">
+        <input type="checkbox" id="mango" name="main[]" value="Mango" data-price="35">
+        <label for="mango">
+        <img src="PicsVids/mango.jpeg" alt="Mango" class="ingredient-img"> Mango (₱35)
+        </label>
+    </div>
+    <div class="ingredient-option">
+        <input type="checkbox" id="sweet-corn" name="main[]" value="Sweet Corn" data-price="15">
+        <label for="sweet-corn">
+        <img src="PicsVids/corn.jpeg" alt="Sweet Corn" class="ingredient-img"> Sweet Corn (₱15)
+        </label>
+    </div>
+    <div class="ingredient-option">
+        <input type="checkbox" id="watermelon" name="main[]" value="Watermelon" data-price="25">
+        <label for="watermelon">
+        <img src="PicsVids/watermelon.jpeg" alt="Watermelon" class="ingredient-img"> Watermelon (₱25)
+        </label>
+    </div>
+    
+    
+    
+    
+    <!-- Toppings -->
+    <h3 class="w3-text-red"><b>Step 3: Select Your Toppings</b></h3>
+    <div class="topping-option">
+        <input type="checkbox" id="ube" name="toppings[]" value="Ube" data-price="30">
+        <label for="ube">
+        <img src="PicsVids/uube.jpeg" alt="Ube" class="topping-img"> Ube (₱30)
+        </label>
+    </div>
+    <div class="topping-option">
+        <input type="checkbox" id="ice-cream" name="toppings[]" value="Ice Cream" data-price="40">
+        <label for="ice-cream">
+        <img src="PicsVids/vanilla.jpeg" alt="Ice Cream" class="topping-img"> Ice Cream (₱40)
+        </label>
+    </div>
+    <div class="topping-option">
+        <input type="checkbox" id="stik-o" name="toppings[]" value="Stik-O" data-price="10">
+        <label for="stik-o">
+        <img src="PicsVids/waferstick.jpeg" alt="Stik-O" class="topping-img"> Stik-O (₱10)
+        </label>
+    </div>
+    <div class="topping-option">
+        <input type="checkbox" id="leche-flan" name="toppings[]" value="Leche Flan" data-price="50">
+        <label for="leche-flan">
+        <img src="PicsVids/flan.jpeg" alt="Leche Flan" class="topping-img"> Leche Flan (₱50)
+        </label>
+    </div>
+    
+        <!-- Price Display -->
+        <div id="price-display">Total Price: ₱0</div><br>
+        
+        <!-- Submit Button -->
+        <button type="submit" class="submit-btn">Place Order</button>
+        </form>
+    </div>
+  
+<div class="footer">
+    <p>© 2024 Krazy DIY Halo-Halo | All Rights Reserved</p>
+    <p>Developer <a href="https://www.facebook.com/rainier.reli.9?mibextid=ZbWKwL" target="_blank">Rainier Reli</a></p>
+</div>
+
+<!-- Floating Button -->
+<button class="floating-btn" onclick="window.location.href='Orders.html'">
+    <i class="fas fa-shopping-cart"></i>
+</button>
+
+<script>
+// Calculate Total Price
+function calculatePrice() {
+    let total = 0;
+    const items = document.querySelectorAll('input[type="checkbox"]:checked, input[type="radio"]:checked');
+    items.forEach(item => {
+        total += parseInt(item.dataset.price);
+    });
+    document.getElementById('price-display').textContent = `Total Price: ₱${total}`;
+}
+
+// Attach Event Listeners
+document.querySelectorAll('input[type="checkbox"], input[type="radio"]').forEach(item => {
+    item.addEventListener('change', calculatePrice);
+});
+
+// Confirm Order Submission
+function confirmOrder() {
+    const total = document.getElementById('price-display').textContent.split("₱")[1];
+    return confirm(`Your total is ₱${total}. Do you want to place the order?`);
+}
+// Confirm Order Submission
+function confirmOrder() {
+    const total = document.getElementById('price-display').textContent.split("₱")[1];
+    const isConfirmed = confirm(`Your total is ₱${total}. Do you want to place the order?`);
+    
+    if (isConfirmed) {
+        alert("Your order has been placed!");
+    }
+    
+    return isConfirmed; // If the user confirms, the form will be submitted.
+}
+
+
+    // Toggle navigation menu
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+</script>
+
+</body>
+</html>

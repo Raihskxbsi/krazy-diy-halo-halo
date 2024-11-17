@@ -1,0 +1,155 @@
+/* General Styles */
+body, h1, h2, h3, h4, h5 {
+  font-family: "Poppins", sans-serif;
+}
+body {
+  background-color: #eaffff;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Top Menu Style */
+.top-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #c042c5;
+  color: white;
+  padding: 10px 20px;
+}
+
+/* Logo beside the Title */
+.top-menu .logo-title {
+  display: flex;
+  align-items: center;
+}
+
+.top-menu .logo-title img {
+  width: 100px; /* Adjust the logo size */
+  height: auto;
+  margin-right: 10px;
+}
+
+.top-menu a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.top-menu a:hover {
+  background-color: #c042c5;
+}
+
+/* Responsive Inputs */
+input[type="checkbox"], input[type="radio"] {
+  margin-right: 10px;
+}
+
+/* Submit Button */
+.submit-btn {
+  background-color: #ff4d4d;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.submit-btn:hover {
+  background-color: #e60000;
+}
+
+/* Price Display */
+#price-display {
+  font-size: 20px;
+  color: #ff4d4d;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.base-img {
+  width: 50px; /* Adjust the image size */
+  height: auto;
+  margin-right: 10px;
+}
+/* Styling for Ingredient and Topping Images */
+.ingredient-option, .topping-option, .base-option{
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.ingredient-img, .topping-img {
+  width: 50px; /* Adjust the image size */
+  height: auto;
+  margin-right: 10px;
+}
+/* Navigation Bar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  background-color: #c042c5;
+  padding: 10px 0;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 20px;
+}
+
+.navbar a:hover {
+  background-color: #c042c5;
+}
+
+/* Floating Button Style*/
+.floating-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ff4d4d;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 30px;
+  font-size: 16px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-decoration: none;
+}
+
+.floating-btn:hover {
+  background-color: #e60000;    
+}
+
+/* Mission Section Centered Text */
+.w3-light-grey.w3-container {
+  text-align: center;
+  padding: 20px;
+  margin-top: 75px;
+}
+
+/* Logo beside the Title */
+.logo-title {
+  display: flex;
+  align-items: center;
+}
+
+.logo-title img {
+  width: 100%; /* Makes the logo responsive */
+  max-width: 250px; /* Sets a max width of 200px */
+  height: auto; /* Maintains aspect ratio */
+  margin-right: 10px;
+}
+
+/* Responsive Images */
+.responsive-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}

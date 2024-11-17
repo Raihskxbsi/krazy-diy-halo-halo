@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krazy DIY Halo-Halo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: #ff4444;
+            color: white;
+        }
+
+
+        .navbar .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            display: flex;
+            justify-content: center; /* Horizontally centers */
+            align-items: center; /* Vertically centers */
+        }
+        .navbar img{
+            width: 100px;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 600;
+        }
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        .navbar .menu-toggle {
+            display: none;
+            font-size: 1.5em;
+            cursor: pointer;
+        }
+        /* Responsive Navbar */
+        @media (max-width: 768px) {
+            .navbar .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 30px;
+                background-color: #ff4444;
+                border-radius: 5px;
+                padding: 10px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+            .navbar .nav-links.active {
+                display: flex;
+            }
+            .navbar .menu-toggle {
+                display: block;
+            }
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 50px;
+            background-color: #ffe5e5;
+        }
+        .hero h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        .hero p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+        .hero img {
+            max-width: 200px;
+            margin-top: 20px;
+        }
+        /* Section Titles */
+        .section {
+            padding: 50px;
+            text-align: center;
+        }
+        .section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #ff4444;
+        }
+        .section hr {
+            width: 50px;
+            border: 3px solid #ff4444;
+            margin: 0 auto 20px;
+            border-radius: 3px;
+        }
+        /* Best Sellers */
+        .products {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .product-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 250px;
+            text-align: center;
+        }
+        .product-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .product-card p {
+            font-weight: 600;
+            margin: 10px 0;
+        }
+        /* Promotional Poster */
+        .promo img {
+            width: 100%;
+            max-width: 800px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        /* Footer */
+        .footer {
+            background-color: #222;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .footer a {
+            color: #ff4444;
+            text-decoration: none;
+        }
+        /* Floating Button */
+        .floating-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #ff4444;
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 50%;
+            font-size: 18px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+        .floating-btn:hover {
+            background-color: #e63e3e;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<div class="navbar">
+    <div class="logo"><img src="PicsVids/Logo.png" alt="Krazy DIY Halo-Halo"> <span> Krazy DIY Halo-Halo</span></div>
+    <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="orders.html">Order</a>
+        <a href="about.html">About</a>
+        <a href="#">Exit</a>
+    </div>
+    <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
+    </div>
+</div>
+
+<!-- Hero Section -->
+<div class="hero">
+    <h1>Krazy DIY Halo-Halo</h1>
+    <img src="PicsVids/Logo.png" alt="Logo">
+    <p>"Unleash Your Sweet Creativity! 🌈✨ At <b>Krazy DIY Halo-Halo</b>, YOU are the master of your dessert! Choose from our fresh ingredients and craft your perfect halo-halo creation. It's time to mix, match, and make it as <b>'krazy'</b> as you like! 🍧🍨🍓"</p>
+</div>
+
+<!-- Best Sellers Section -->
+<div class="section">
+    <h2>Best Sellers</h2>
+    <hr>
+    <div class="products">
+        <div class="product-card">
+            <img src="PicsVids/halo.png" alt="Classic Halo-Halo">
+            <p>Classic Halo-Halo</p>
+        </div>
+        <div class="product-card">
+            <img src="PicsVids/ube.jpeg" alt="Ube Supreme">
+            <p>Ube Supreme</p>
+        </div>
+        <div class="product-card">
+            <img src="PicsVids/fruit.jpeg" alt="Fruit Fiesta">
+            <p>Fruit Fiesta</p>
+        </div>
+    </div>
+</div>
+
+<!-- Promotional Poster Section -->
+<div class="section promo">
+    <h2>Special Promotion</h2>
+    <hr>
+    <a href="PicsVids/bg.jpeg" target="_blank">
+        <img src="PicsVids/bg.jpeg" alt="Promotional Poster">
+    </a>
+    <p>Click on the poster for our latest promotional offer!</p>
+</div>
+
+<!-- YouTube Promotional Video Section -->
+<div class="section">
+    <h2>Watch Our Promotional Video</h2>
+    <hr>
+    <p>Check out our video to learn more about how you can create your perfect halo-halo!</p>
+    <a href="https://youtu.be/2rozfPdRA8A?si=Aq03jFpbZ0XAjVdW" target="_blank">
+        <button class="w3-button w3-red">Watch Video</button>
+    </a>
+</div>
+
+<!-- Mission and Vision -->
+<div class="section">
+    <h2>Mission</h2>
+    <p>To provide a unique and interactive halo-halo experience by empowering customers to create their own delicious and personalized halo-halo concoctions.</p>
+    <h2>Vision</h2>
+    <p>To become the leading destination for DIY halo-halo, known for our vibrant, customer-driven approach and commitment to quality.</p>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+    <p>© 2024 Krazy DIY Halo-Halo | All Rights Reserved</p>
+    <p>Developer <a href="https://www.facebook.com/rainier.reli.9?mibextid=ZbWKwL" target="_blank">Rainier Reli</a></p>
+</div>
+
+<!-- Floating Button -->
+<button class="floating-btn" onclick="window.location.href='Orders.html'">
+    <i class="fas fa-shopping-cart"></i>
+</button>
+
+<script>
+    // Toggle navigation menu
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+</script>
+
+</body>
+</html>
